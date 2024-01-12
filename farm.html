@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--グーグルフォントを読み込ませる!-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--しっぽり明朝!-->
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+    <!--つきみ!-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&family=Tsukimi+Rounded:wght@300;500;600&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="textArea-h">
+            <div class="header-logo">こうはら農園</div>
+            <div class="header-menu">
+                <ul>
+                    <li>トップ<br><span>TOP</span></li>
+                    <li>私たちについて<br><span>ABOUT</span></li>
+                    <li>商品案内<br><span>ITEMS</span></li>
+                    <li>お買い物<br><span>SHOPPING</span></li>
+                    <li>新着情報<br><span>NEWS</span></li>
+                    <li>お問い合わせ<br><span>CONTACT</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-message"><p class="typing">まっすぐ、ていねいに</p>
+            <style>
+                .typing {
+                  font-size: 80px;
+                  letter-spacing: 0.2em;
+                  word-break: break-all;
+                  position: relative;
+                }
+            
+                .typing span {
+                  display: none;
+                }
+            
+                .typing:after {
+                  content: "|";
+                  animation: typingCursor .8s ease infinite;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                }
+            
+                @keyframes typingCursor {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+              </style>
+        <script>
+            $(function () {
+              // テキストごとにspanタグを生成する
+              $(".typing").each(function () {
+                var text = $(this).text();
+                var textbox = "";
+                text.split('').forEach(function (target) {
+                  if (target !== " ") {
+                    textbox += '<span>' + target + '</span>';
+                  } else {
+                    textbox += ' ';
+                  }
+                });
+                $(this).html(textbox);
+              });
+        
+              // タイピングアニメーション
+              $(".typing span").each(function (i) {
+                var time = 300;
+                $(this).delay(time * i).fadeIn(time);
+              });
+        
+              // マウスオーバー時の処理
+              $(".typing").on("mouseover", function () {
+                // ここにマウスオーバー時のアクションを追加
+                // 例えば、背景色を変更する場合は以下のようにします
+            
+                setTimeout(() => {
+                  $(this).css("background-color", "");
+                }, 500);
+              });
+            });
+          </script>
+        </div>
+    </header>
+    <main>
+        <section id="sec1">
+            <div class="textArea-1">
+                <h1>こうはら農園について</h1>
+                <h2>-ABOUT KOHARA FARM-</h2>
+            </div>
+            <div class="about-me">
+                <p>山形県米沢市 吾妻山のふもとで野菜栽培を行っております。<br>
+                    土づくりに力をいれ、丁寧に育てることを心がけております。<br>
+                    こうはら農園自慢の野菜を是非ご賞味ください。
+                </p>
+                <p>無農薬有機栽培 | こうはら農園<br>
+                    <span>代表</span> 甲原 和紀
+                </p>
+            </div>
+        </section>
+        <section id="sec2">
+            <div class="fade-in">
+                
+            </div>
+        </section>
+        <section id="sec3">
+            <div class="textArea-2">
+                <h1>商品案内</h1>
+                <h2>-ITEMS-</h2>
+            </div>
+                <div class="items">
+                    <ul class="items-list">
+                    <li>
+                    <p class="items-text">有機栽培<br>さつまいも</p>
+                    <p class="items-img"><img class="w-6/12 img1" width="70%" src="sweetpotato.jpg"  srcset=""></p>
+                    </li>
+                    <li><p class="items-text">有機栽培<br>えだまめ</p>
+                        <p class="items-img"><img class="w-6/12 img1" width="70%" src="tabegoto-896-l.jpg"  srcset=""></p>
+                    </li>
+                    <li>
+                        <p class="items-text">有機栽培<br>かぶ</p>
+                        <p class="items-img"><img class="w-6/12 img1" width="70%" src="tabegoto-kabu-325-l.jpg"  srcset=""></p>
+                    </li>
+                    <li>
+                        <p class="items-text">有機栽培<br>だいこん</p>
+                        <p class="items-img"><img class="w-6/12 img1" width="70%" src="tabegoto--daikon.jpg"  srcset=""></p>
+                    </li>
+                    </ul>
+                </div>
+               
+            </div>
+        </section>
+        <section id="sec4">
+            <div class="textArea-3">
+                <h1>お買い物</h1>
+                <h2>-SHOPPING-</h2>
+            </div>
+                <div class="shopping-page">
+                   <h1>こうはら農園通販サイトへは<br>
+                <a href="">こちら</a>をクリック
+                   </h1>
+                </div>
+        </section>
+        <section id="sec5">
+            <div class="textArea-4">
+                <h1>新着情報</h1>
+                <h2>-NEWS-</h2>
+            </div>
+                <dl>
+                    <div class="news-list">
+                      <dt>2023/10/07</dt>
+                      <dd><a href="#">立派なさつまいもを収穫しました。</a>
+                      </dd>
+                      <dt>2023/9/17</dt>
+                      <dd>
+                        <a href="#">くりのペーストが出来ました。</a>
+                      </dd>
+                      <dt>2023/8/10</dt>
+                      <dd>
+                        <a href="#">さつまいもが成長中です。</a>
+                      </dd>
+                      <dt>2023/8/5</dt>
+                      <dd>
+                        <a href="#">美味しいじゃがいもを収穫しました。</a>
+                      </dd>
+                      <button>もっと見る</button>
+                    </div>
+                  </dl>
+            </div>
+        </section>
+        <section id="sec6">
+            <div class="textArea-5">
+                <h1>お問い合わせ</h1>
+                <h2>-CONTACT-</h2>
+            </div>
+                <div class="inputArea">
+                    <label for="name">お名前</label><br>
+                    <input type="text" name="name" id="name" class="w-full">
+                </div>
+                <div class="inputArea">
+                    <label for="email">メールアドレス</label><br>
+                    <input type="email" name="email" id="email" class="w-full">
+                </div>
+                <div class="inputArea">
+                    <label for="contents">お問い合わせ内容</label><br>
+                    <textarea name="comment" cols="50" rows="20"></textarea>
+                </div>
+                <div class="w-full text-center">
+                    <button>送信する</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-text">
+            <h1 class="f-t-1">こうはら農園</h1>
+            <h2 class="f-t-2">TEL <span>0238-38-3175</span></h2>
+            <h2 class="f-t-3">(平日 9:00~17:00)</h2>
+
+            <i class="fa-sharp fa-solid fa-envelope fa-3x"></i>
+            <i class="fa-brands fa-facebook fa-3x"></i>
+            <i class="fa-brands fa-instagram fa-3x"></i>
+        </div>
+        <div class="footer-img">
+            <img src="tabegoto-basil-l.jpg" alt="" srcset="">
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<style>
+body{
+    width: 1200px;
+    background-image: url();
+}
+    header {
+        height: 800px;
+        background-image: url(cabbage-3722498_1280.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 0;
+    }
+
+    .textArea-h {
+        color: snow;
+        display: flex;
+        align-items: center;
+        float: left;
+        height: 100px;
+        width: 1200px;
+        background-color: rgba(4, 28, 17, 0.8);
+        position: fixed;
+        z-index: 1;
+    }
+
+    .header-logo {
+        font-family: 'Tsukimi Rounded', sans-serif;
+        font-size: 45px;
+    }
+
+    .header-menu li {
+        font-family: 'Shippori Mincho B1', serif;
+        text-align: center;
+        float: left;
+        list-style: none;
+        font-size: 20px;
+        border-right: 1px solid snow;
+        padding: 0 20px;
+    }
+    .header-menu span {
+        font-size: 15px;
+    }
+    .top-message{
+        color: snow;
+        font-size: 100px;
+        padding:300px 90px;
+        font-family: 'Shippori Mincho B1', serif;
+    }
+     section {
+        margin: 200px 0;
+        text-align: center;
+        font-family: 'Shippori Mincho B1', serif;
+    }
+    .textArea-1,
+    .textArea-2,
+    .textArea-3,
+    .textArea-4,
+    .textArea-5{
+        padding-top: 20px;
+        width: 120px;
+        color: snow;
+        height: 460px;
+        margin: 50px auto;
+        width: 700px;
+        height: 200px;
+    }
+ #sec1 {
+    }
+.textArea-1 {
+        background-image: url(vegetable-1085065_1280.jpg);
+        background-position: center center;
+    }
+    .textArea-1 h1 {
+        font-size: 40px;
+    }
+    .textArea-1 h2 {
+        font-size: 13px;
+    }
+    .about-me {
+        padding-top: 80px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .textArea-2 {
+        background-image: url(tomatoes-1561565_1280.jpg);
+        background-position: center center;
+    }
+    .textArea-2 h1 {
+        font-size: 30px;
+    }
+    .textArea-2 h2 {
+        font-size: 23px;
+    }
+.items-list li {
+    
+        margin:0 auto;
+        font-size: 36px;
+        display: flex;
+        
+    }
+    ul li .items-text,
+    ul li .items-img {
+width: 600px;
+        box-sizing: border-box;
+    }
+    ul li .items-text{
+        padding: 100px 0;
+    }
+    /* 奇数の行に対して指定 */
+    ul li:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+ 
+    .textArea-3 {
+        color: snow;
+        margin: 100px auto;
+        background-image: url(fruits-601742_1280.jpg);
+        background-position: bottom;
+    }
+    .textArea-3 h1 {
+        font-size: 30px;
+    }
+    .textArea-3 h2 {
+        font-size: 23px;
+    }
+    .shopping-page-img{
+        width: 80%;
+        height: 80%;    
+    }
+    .shopping-page{
+        color: black;
+    }
+    .shopping-page h1{
+        width: 100%;
+    }
+    .textArea-4{
+        margin-top: 200px;
+        background-image: url(landscape-2211587_1280.jpg);
+        background-position: center center;
+    }
+    #sec5{
+        margin-bottom: 
+    }
+    dl {
+      padding: 20px;
+    }
+
+    .textArea-5{
+        background-image: url(corn-field-440338_1280.jpg);
+        background-position: center center;
+        font-size: 20px;
+        color: snow;
+
+    }
+    #sec6 .inputArea{
+        margin: 50px;
+        font-size: 18px;
+        color: black;
+    }
+    #sec6 textarea{
+        border-radius: 5px;
+    }
+    #sec6 button{
+        border: solid 2px black;
+        border-radius: 10px;
+        padding:  10px 20px;
+    }
+    footer{
+        color: snow;
+        background-color: rgb(11, 66, 11);
+        display: flex;
+        font-family: 'Shippori Mincho B1', serif;
+        text-align: center;
+        height: 500px;
+        margin-top: 300px;
+        background-image: url(tabegoto-basil-l.jpg);
+    }
+    .footer-text{
+        margin-right: 100px;
+        width: 800px;
+    }
+    .footer-img img{
+        width: 600px;
+        height: 80%;
+        height: 500px;
+        padding: 0;
+    }
+    .f-t-1{
+        font-size: 75px;
+        font-family: 'Tsukimi Rounded', sans-serif;
+    }
+    .f-t-2{
+        font-family: 'Noto Serif JP', serif;
+        margin-left: 50px;
+        border-bottom: solid 1px snow;
+        font-size: 25px;
+    }
+.f-t-2 span{
+        font-size: 45px;
+        
+    }
+    .f-t-3{
+        font-family: 'Noto Serif JP', serif;
+    }
+
+    .fa-envelope,
+    .fa-instagram,
+    .fa-facebook{
+        padding: 20px;
+    }
+</style>
